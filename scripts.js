@@ -19,7 +19,7 @@ function startGame() {
 
   shuffle(cardsArray);
 
-  gameBoard.style.gridTemplateColumns = `repeat(${Math.ceil(Math.sqrt(cardsArray.length))}, 110px)`;
+  gameBoard.style.gridTemplateColumns = `repeat(auto-fit, minmax(90px, 1fr))`;
 
   cardsArray.forEach(planet => {
     const card = createCard(planet);

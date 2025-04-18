@@ -1,26 +1,22 @@
-body {
+  body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: radial-gradient(circle at center, #cdcdd3, #000);
+    background: radial-gradient(circle at center, #3737a9, #000);
     color: #fff;
     text-align: center;
   }
   
   h1 {
     margin-top: 20px;
-    color: #00ffd0;
+    color: #00ffd9;
     text-shadow: 1px 1px 5px #fff;
-  }
-  h2 {
-    margin-top: 20px;
-    color: #00ffd0;
-    text-shadow: 1px 1px 5px #fff;
+    font-size: 6vw;
   }
   
   #level {
     margin: 10px 0;
-    font-size: 18px;
+    font-size: 4vw;
   }
   
   #game-board {
@@ -28,11 +24,13 @@ body {
     gap: 10px;
     justify-content: center;
     margin: 20px auto;
+    padding: 0 10px;
+    max-width: 100%;
   }
   
   .card {
-    width: 100px;
-    height: 140px;
+    width: 90px;
+    height: 120px;
     perspective: 1000px;
     cursor: pointer;
   }
@@ -63,7 +61,7 @@ body {
   }
   
   .card-back {
-    background-color: #458ea6;
+    background-color: #111;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,10 +75,10 @@ body {
   
   button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 4vw;
     background: #222;
     color: white;
-    border: 1px solid #00e5ff;
+    border: 1px solid #00aaff;
     border-radius: 10px;
     cursor: pointer;
     margin-bottom: 30px;
@@ -90,3 +88,29 @@ body {
     background-color: #444;
   }
   
+  /* Media Queries */
+  @media (min-width: 600px) {
+    h1 {
+      font-size: 3vw;
+    }
+  
+    #level, button {
+      font-size: 1.2rem;
+    }
+  
+    .card {
+      width: 100px;
+      height: 140px;
+    }
+  }
+  
+  @media (min-width: 900px) {
+    #game-board {
+      max-width: 800px;
+    }
+  
+    .card {
+      width: 110px;
+      height: 150px;
+    }
+  }
